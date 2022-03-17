@@ -20,7 +20,7 @@
         <a href="#d" class="closebtn" on:click={handleNav}>&times;</a>
         <ul>
             <li><a href="#a"><i class="fa-solid fa-user"></i><p>Account</p></a></li>
-            <li><a href="#s"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
+            <li><a href="/food/Orders"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
             <li><a href="#s"><i class="fa-solid fa-heart"></i><p>Favourite</p></a></li>
             <li><a href="#a"><i class="fa-solid fa-user"></i><p>Support</p></a></li>
             <li><a href="#s"><i class="fa-solid fa-user"></i><p>About</p></a></li>

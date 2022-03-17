@@ -4,7 +4,7 @@
 
 </script>
 
-<button class={type} class:flat={flat}>
+<button class={type} class:flat={flat} on:click>
     <slot></slot>
 </button>
 

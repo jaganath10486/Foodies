@@ -30,13 +30,24 @@
    let video = "https://www.youtube.com/embed/" +
                 meal.strYoutube.split("=")[1];
    import Button from "$lib/shared/Button.svelte";
+   import cart_items from '$lib/stores/Cart.js';
+   const add = (item) => {
+        cart_items.update((old_items) => 
+        {
+            old_items.push(item);
+            let new_items = old_items.filter((it, index) => {
+                return old_items.indexOf(it) === index;
+            });
+            return new_items;
+        });
+   }
 </script>
 
 <div class="food-item">
     <div class="img">
         <img src={meal.strMealThumb} alt={meal.strMeal}>
         <div class="btn">
-            <Button type = 'primary'>
+            <Button type = 'primary' on:click = {() => add(meal)}>
                 Add to Cart
             </Button>
         </div>
@@ -201,7 +212,7 @@
         padding-top: 60px;
     }
 
-    @keyframes fade
+    @keyframes -gloabl-fade
     {
         0%{
             opacity: 0;
