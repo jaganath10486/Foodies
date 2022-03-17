@@ -54,7 +54,7 @@
         background-color: rgba(0,0,0,.74);
         background-blend-mode: hue;
         flex-grow: 1;
-        cursor:grab;
+        
     }
     .front
     {
@@ -80,8 +80,30 @@
     {
         width: 40%;
         padding: 10px;
-        word-break: break-all;
+        word-break: keep-all;
         align-self: center;
         font-size: 20px;
+    }
+    @media screen and (max-width : 720px)
+    {
+        .home
+        {
+            height: fit-content;
+        }
+        .front
+        {
+            flex-direction: column;
+            padding: 30px;
+        }
+        .heading
+        {
+            text-align: center;
+
+            width: 100%;
+        }
+        .info
+        {
+            width: 100%;
+        }
     }
 </style>

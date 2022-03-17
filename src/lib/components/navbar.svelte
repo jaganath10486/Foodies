@@ -4,6 +4,10 @@
     {
        navOpen = !navOpen;
     }
+    function CloseNav()
+    {
+       navOpen = false;
+    } 
 </script>
 
 <nav class="navbar">
@@ -19,12 +23,12 @@
     <div class="nav-links sidepanel" class:open = {navOpen} class:close = {!navOpen}>
         <a href="#d" class="closebtn" on:click={handleNav}>&times;</a>
         <ul>
-            <li><a href="#a"><i class="fa-solid fa-user"></i><p>Account</p></a></li>
-            <li><a href="/food/Orders"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
-            <li><a href="#s"><i class="fa-solid fa-heart"></i><p>Favourite</p></a></li>
-            <li><a href="#a"><i class="fa-solid fa-user"></i><p>Support</p></a></li>
-            <li><a href="#s"><i class="fa-solid fa-user"></i><p>About</p></a></li>
-            <li><a href="#H"><i class="fa-solid fa-user"></i><p>Contact</p></a></li>
+            <li on:click={CloseNav}><a href="#a"><i class="fa-solid fa-user"></i><p>Account</p></a></li>
+            <li on:click={CloseNav}><a href="/food/Orders"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
+            <li on:click={CloseNav}><a href="#s"><i class="fa-solid fa-heart"></i><p>Favourite</p></a></li>
+            <li on:click={CloseNav}><a href="#a"><i class="fa-solid fa-user"></i><p>Support</p></a></li>
+            <li on:click={CloseNav}><a href="#s"><i class="fa-solid fa-user"></i><p>About</p></a></li>
+            <li on:click={CloseNav}><a href="#H"><i class="fa-solid fa-user"></i><p>Contact</p></a></li>
         </ul>
     </div> 
     </div>
@@ -38,6 +42,8 @@
 
 .navbar
 {
+  margin-top: 5px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,12 +51,11 @@
   font-size: 18px;
   background-color: whitesmoke;
   border: none;
-  
 }
 
 .navbar .three-bar
 {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .navbar .title h1
@@ -61,10 +66,9 @@
 
 .navbar .toggletheme
 {
-    padding-right: 10px;
+    padding-right: 15px;
     font-size: 20px;
     transition: 0.5s;
-
 }
 .navbar .toggletheme i
 {
@@ -104,16 +108,16 @@
 /* The sidepanel menu */
 .sidepanel 
 {
-  height: 100vh; /* Specify a height */
+  height: 100vh;
   width: 0; 
   position: fixed; 
-  z-index: 1; /* Stay on top */
+  z-index: 1;
   top: 0px;
   right: 0px;
   background-color: #111; /* Black*/
   overflow-x: hidden;
   overflow-y: auto;
-  padding-top: 60px; 
+  padding-top: 50px; 
   transition: 0.75s; 
 }
 
@@ -162,8 +166,8 @@
 .sidepanel .closebtn
 {
   position: absolute;
-  top: 0;
-  left: 0px;
+  top: -20px;
+  left: -5px;
   font-size: 36px;
 }
 

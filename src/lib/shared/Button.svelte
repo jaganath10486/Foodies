@@ -38,4 +38,9 @@
         background-color: green;
         color: red;
     }
+    .secondary
+    {
+        background-color: red;
+        color: green;
+    }
 </style>
